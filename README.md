@@ -39,6 +39,46 @@ variables must be provided in order to access AWS S3 bucket.
 `export AWS_SECRET_ACCESS_KEY=[secret access key]`
 `export AWS_ACCESS_KEY_ID=[access key id]`
 
+In order to change the database change the database connection 
+properties in the following file.
+
+`petdogs-db.properties`
+
+```
+petdogs.datasource.jdbcUrl=jdbc:mysql://localhost:3306/[yourschemaname]?serverTimezone=UTC
+petdogs.datasource.username=***
+petdogs.datasource.password=***
+```
+
+For re-creating the tables following property key must be changed
+to the approriate value.
+
+```
+use validate | update | create | create-drop
+hibernate.hbm2ddl.auto=update
+```
+
+The AWS S3 bucket policy is configured in such a way that the annonymous
+access is allowed.
+
+```
+> {
+>     "Version": "2012-10-17",
+>    "Statement": [
+>        {
+>            "Sid": "AddPerm",
+>            "Effect": "Allow",
+>            "Principal": "*",
+>            "Action": [
+>                "s3:GetObject"
+>            ],
+>            "Resource": [
+>                "arn:aws:s3:::petdog-bucket/*"
+>            ]
+>        }
+>    ]
+> }
+```
 
 ## Creating a new dog breed record
 
