@@ -34,11 +34,11 @@ java -jar petdogs-0.0.1-SNAPSHOT.jar
 It must be noted that when the project is started following environmental
 variables must be provided in order to access AWS S3 bucket.
 
-export AWS_SECRET_ACCESS_KEY=<secre access key>
-export AWS_ACCESS_KEY_ID=<access key id>
+export AWS_SECRET_ACCESS_KEY="[secret access key]"
+export AWS_ACCESS_KEY_ID="[access key id]"
 
 
-##Creating a new dog breed record
+## Creating a new dog breed record
 
 Api Endpoing signature : http://<host>:<port>/petdogs/dogs
 Supported HTTP method : Only PUT
@@ -55,7 +55,7 @@ Example Response:
 }
 
 
-##Retrieve an existing dog breed record based on the ID
+## Retrieve an existing dog breed record based on the ID
 
 Api Endpoing signature : http://<host>:<port>/petdogs/dogs/{id}
 Supported HTTP method : Only GET
@@ -71,7 +71,7 @@ Example Response:
     "accessUrl": "https://s3.amazonaws.com/petdog-bucket/3ce2b612-5e39-4330-9e86-58947ceedc37.jpg"
 }
 
-##Delete an existing dog breed record based on the ID
+## Delete an existing dog breed record based on the ID
 
 Api Endpoing signature : http://<host>:<port>/petdogs/dogs/{id}
 Supported HTTP method : Only DELETE
@@ -85,7 +85,7 @@ Example Response:
 }
 
 
-##Search an existing dog breed by the breed name
+## Search an existing dog breed by the breed name
 
 Api Endpoing signature : http://<host>:<port>/petdogs/dogs?breedName=<any name>
 Supported HTTP method : Only GET
@@ -108,7 +108,7 @@ Example Response:
 }
 
 
-##Find all existing dog breeds , paged
+## Find all existing dog breeds , paged
 
 Api Endpoing signature : http://<host>:<port>/petdogs/dogs?size=<pagesize>&page=<pagenumber>
 Supported HTTP method : Only GET
