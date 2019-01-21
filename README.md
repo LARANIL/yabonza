@@ -62,22 +62,22 @@ The AWS S3 bucket policy is configured in such a way that the annonymous
 access is allowed.
 
 ```
-> {
->     "Version": "2012-10-17",
->    "Statement": [
->        {
->            "Sid": "AddPerm",
->            "Effect": "Allow",
->            "Principal": "*",
->            "Action": [
->                "s3:GetObject"
->            ],
->            "Resource": [
->                "arn:aws:s3:::petdog-bucket/*"
->            ]
->        }
->    ]
-> }
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "AddPerm",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": [
+                "s3:GetObject"
+            ],
+            "Resource": [
+                "arn:aws:s3:::petdog-bucket/*"
+            ]
+        }
+    ]
+}
 ```
 
 ## Creating a new dog breed record
