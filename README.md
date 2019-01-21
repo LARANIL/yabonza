@@ -19,23 +19,25 @@ This is a generic Maven project. Clone the source code and
 navigate to the root folder. Execute following commands for
 building the application
 
+```
 1. mvn clean - For cleaning the project
 2. mvn package - for packaging the project 
 3. mvn spring-boot:run - for running the project during the development
+```
 
-mvn package - This command would package the project as a 
+`mvn package` - This command would package the project as a 
 runnable jar file. Once the jar file is created execute the following 
 command to run the project.
 
-java -jar petdogs-0.0.1-SNAPSHOT.jar 
+`java -jar petdogs-0.0.1-SNAPSHOT.jar` 
 [make sure the path to the file name is accurate]
 
 
 It must be noted that when the project is started following environmental
 variables must be provided in order to access AWS S3 bucket.
 
-export AWS_SECRET_ACCESS_KEY="[secret access key]"
-export AWS_ACCESS_KEY_ID="[access key id]"
+`export AWS_SECRET_ACCESS_KEY=[secret access key]`
+`export AWS_ACCESS_KEY_ID=[access key id]`
 
 
 ## Creating a new dog breed record
