@@ -10,11 +10,11 @@ This code base contains following REST API endpoints.
 5. Find all the existing dog breeds , page by page
 
 
-##Pre-requisites
+## Pre-requisites
 This project runs of SpringBoot , hence JAVA 1.8 must be used 
 to run the project
 
-##How To Build
+## How To Build
 This is a generic Maven project. Clone the source code and 
 navigate to the root folder. Execute following commands for
 building the application
